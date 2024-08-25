@@ -1,29 +1,22 @@
 {
-  "name": "oillim-homepage",
+  "name": "astro-cv",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/react": "^3.6.2",
-    "@astrojs/rss": "^1.0.1",
-    "@astrojs/sitemap": "^1.0.0",
-    "@types/react-dom": "^18.3.0",
-    "astro": "^4.14.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "typescript": "^5.5.4"
-  },
-  "devDependencies": {
-    "@types/react": "^18.3.4",
-    "@typescript-eslint/parser": "^8.2.0",
-    "eslint": "^9.9.1",
-    "eslint-plugin-astro": "^1.2.3"
+    "@astrojs/alpinejs": "^0.2.2",
+    "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/vercel": "^3.1.0",
+    "@types/alpinejs": "^3.7.2",
+    "alpinejs": "^3.12.3",
+    "astro": "^2.8.5",
+    "astro-icon": "^0.8.1",
+    "tailwindcss": "^3.4.10"
   }
 }

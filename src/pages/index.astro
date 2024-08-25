@@ -1,13 +1,9 @@
 ---
 import * as CONTENT from "./content"
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Navbar from "../components/Navbar.astro";
-import Title from "../components/Title.astro"
-import SkillCard from "../components/SkillCard.astro"
+import Container from "../components/Container.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
-
-
 
 <html lang="en">
 	<head>
@@ -18,84 +14,51 @@ import SkillCard from "../components/SkillCard.astro"
 		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Nguyen Minh Vu | Portfolio</title>
+		<title>CV | {CONTENT.name}</title>
 	</head>
-	
-
 	<body class="bg-background text-text flex flex-col min-h-screen">
-		<header><Navbar /> </header>
 
-		<main>
-			<section class="about">
-				<article>
-					<p>Hello, I'm Nguyen Minh Vu</p>
-					<Title text="AI Engineer"/>
-				</article>
-			</section>
-				
-			<section class="skills">
-			
-					<Title text="About me"/>
-					<section>
-						<SkillCard title="Education" description="Major in Artificial Intelligence at VNUHCM-University of Science" />
-						<SkillCard title="Experience" description="Internship at FPT Software" />
-						<SkillCard title="Skills" description="Python, C++, Java, SQL, Machine Learning, Deep Learning, Computer Vision" />
-					</section>
-			</section>
+		<Header />
+
+		<!-- Bar Effect -->
+		<article class="mx-auto h-fit max-w-3xl w-[95vw] flex flex-nowrap bg-slate-400">
+				<div class="bg-slate-900 hover:scale-x-[2] w-full h-1.5" id="one"></div>
+				<div class="bg-red-900 hover:scale-x-[2] w-full h-1.5" id="two"></div>
+				<div class="bg-blue-900 hover:scale-x-[2] w-full h-1.5" id="three"></div>
+		</article>
+
+		<main class="mx-auto flex-grow max-h-[90vh] md:max-h-[70vh] max-w-3xl overflow-y-scroll grid gap-5 p-5 w-[95vw]">
+			<Container />
 		</main>
-	</body>
 
+		<Footer />
+	</body>
 </html>
 
-<style>
-	* {
-		margin: 0;
-		padding: 0;
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-		box-sizing: border-box;
+
+<style is:global>
+	*{
+		transition: 350ms ease-in-out;
+		font-family: 'Manrope', sans-serif;
 	}
 
-	main {
-		
-		margin: 50px auto 0 auto;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 100px;
-	}
-	.about {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 40px;
-		width: 100%;
-		height: calc(50vh - 50px);
-		text-align: center;
-		border-bottom: 1px solid rgb(30, 30, 30, 0.3);
-		background-color: #FFEBD4;
-	}
-	.about > article {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+	@media only screen and (max-width: 480px){
+		*{
+			font-size: 12px;
+		}
 	}
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 50px;
-		width: 100%;
-		align-items: center;
-		border-bottom: 1px solid rgb(30, 30, 30, 0.3);
-		padding: 0px 20px 100px 20px;
+	 /* For webkit-based browsers */
+	.overflow-y-scroll::-webkit-scrollbar {
+		width: 3px;
 	}
 
-	.skills > section {
-		display: flex;
-		gap: 40px;
-		flex-wrap: wrap;
-		justify-content: center;
+	.overflow-y-scroll::-webkit-scrollbar-thumb {
+		background-color:#50595e;
+	}
+
+	/* For Firefox */
+	.overflow-y-scroll {
+		scrollbar-width: 1px;
 	}
 </style>
