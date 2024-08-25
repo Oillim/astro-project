@@ -1,23 +1,27 @@
 // Personal Information --> #hero section
-export const name = "Peter Griffin"
-export const designation = "Safety Inspector"
-export const location = "Quahog, Rhode Island"
+export const name = "Nguyen Minh Vu"
+export const designation = "AI Engineer"
+export const location = "Ho Chi Minh, Viet Nam"
 export const pronouns = "he/him"
-export const website = "https://petergriffin.com"
+export const website = "https://facebook.com/Oillims"
 
 // About
-export const about = "An adventurous man working as a safety inspector with a quirky sense of humor. Husband to Louis Griffin. Father of Chris, Brian, and Stewie."
+export const about = "Hi! Welcome to my personal website. I am currently a student at the University of Science,\
+ 					  majoring in Artificial Intelligence. I am passionate about Artificial Intelligence and Machine Learning. \
+					  I am always eager to learn new things and explore the latest technologies. I am also interested in blockchains (a little bit).\
+					  In my free time, I like to watch movies, and play video games. \
+					  Feel free to connect with me on social media or send me an email. I look forward to hearing from you!"
 
 // Work Experience --> #work section
 export const work = [
 	{
-		from: "2001",
-		to: "Present",
-		role: "Safety Inspector",
-		org: "Quahog Safety Department",
-		org_url: "https://quahog.gov/safety",
-		location: "Quahog, Rhode Island",
-		skills: "Safety Inspection, Risk Assessment, Emergency Response"
+		from: "None",
+		to: "None",
+		role: "None",
+		org: "None",
+		org_url: "None",
+		location: "None",
+		skills: "None",
 	}
 ]
 
@@ -52,41 +56,27 @@ export const projects = [
 // Education --> #education section
 export const education = [
 	{
-		from: "1995",
-		to: "1999",
-		institute: "Quahog High School",
-		course: "High School Diploma",
-		location: "Quahog, Rhode Island"
+		from: "Sep 2021",
+		to: "Sep 2025",
+		institute: "University of Science, VNUHCM",
+		course: "Bachelor of Artificial Intelligence",
+		location: "Ho Chi Minh"
 	},
-	{
-		from: "1999",
-		to: "2003",
-		institute: "Quahog Community College",
-		course: "Bachelor of Science in Safety Management",
-		location: "Quahog, Rhode Island"
-	},
-	{
-		from: "2003",
-		to: "2005",
-		institute: "Safety University",
-		course: "Master of Science in Safety Engineering",
-		location: "Boston, Massachusetts"
-	}
 ]
 
 // Contact --> #contact section
 export const contact = [
 	{
 		source_name: "Email",
-		source: "peter.griffin@example.com",
+		source: "nguyenminh29803@gmail.com",
 	},
 	{
-		source_name: "Twitter",
-		source: "https://twitter.com/PeterGriffin",
+		source_name: "Github",
+		source: "https://github.com/Oillim",
 	},
 	{
 		source_name: "LinkedIn",
-		source: "https://www.linkedin.com/in/peter-griffin",
+		source: "https://www.linkedin.com/in/Oillim/",
 	},
 ]
 
@@ -94,26 +84,20 @@ export const contact = [
 
 export const certificates = [
 	{
-		issued: "2005",
-		title: "Certified Safety Inspector",
-		org: "National Safety Association",
-		url: "https://certi.com/url",
-		description: "Certification in safety inspection and risk assessment.",
+		issued: "2024",
+		title: "Deep Learning Specialization",
+		org: "Deeplearning.AI",
+		url: "https://coursera.org/share/afa8c273d8348390b5e9b0cc00a07671",
+		description: "Certification in deep learning techniques and applications.",
 	},
 	{
-		issued: "2006",
-		title: "Emergency Response Training",
-		org: "Quahog Safety Department",
-		url: "https://certi.com/url",
-		description: "Training in handling emergency situations and crisis management.",
+		issued: "2024",
+		title: "Natural Language Processing Specialization",
+		org: "Deeplearning.AI",
+		url: "",
+		description: "Certification in natural language processing and text analysis.",
 	},
-	{
-		issued: "2007",
-		title: "Safety Leadership Workshop",
-		org: "Safety Leaders International",
-		url: "https://certi.com/url",
-		description: "Leadership training in safety management and communication.",
-	}
+
 ]
 
 // Blogs --> #blogs section
