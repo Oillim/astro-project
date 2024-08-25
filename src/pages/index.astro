@@ -3,6 +3,8 @@ import * as CONTENT from "./content"
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Navbar from "../components/Navbar.astro";
+import Title from "../components/Title.astro"
+import SkillCard from "../components/SkillCard.astro"
 ---
 
 
@@ -16,72 +18,84 @@ import Navbar from "../components/Navbar.astro";
 		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>CV | {CONTENT.name}</title>
+		<title>Nguyen Minh Vu | Portfolio</title>
 	</head>
-
+	
 
 	<body class="bg-background text-text flex flex-col min-h-screen">
 		<header><Navbar /> </header>
 
+		<main>
+			<section class="about">
+				<article>
+					<p>Hello, I'm Nguyen Minh Vu</p>
+					<Title text="AI Engineer"/>
+				</article>
+			</section>
+				
+			<section class="skills">
+			
+					<Title text="About me"/>
+					<section>
+						<SkillCard title="Education" description="Major in Artificial Intelligence at VNUHCM-University of Science" />
+						<SkillCard title="Experience" description="Internship at FPT Software" />
+						<SkillCard title="Skills" description="Python, C++, Java, SQL, Machine Learning, Deep Learning, Computer Vision" />
+					</section>
+			</section>
+		</main>
 	</body>
 
 </html>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
+	* {
+		margin: 0;
 		padding: 0;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		box-sizing: border-box;
+	}
+
+	main {
+		
+		margin: 50px auto 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 100px;
+	}
+	.about {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+		width: 100%;
+		height: calc(50vh - 50px);
+		text-align: center;
+		border-bottom: 1px solid rgb(30, 30, 30, 0.3);
+		background-color: #FFEBD4;
+	}
+	.about > article {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		width: 100%;
+		align-items: center;
+		border-bottom: 1px solid rgb(30, 30, 30, 0.3);
+		padding: 0px 20px 100px 20px;
+	}
+
+	.skills > section {
+		display: flex;
+		gap: 40px;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 </style>
