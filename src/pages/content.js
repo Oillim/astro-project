@@ -1,6 +1,6 @@
 // Personal Information --> #hero section
 export const name = "Nguyen Minh Vu"
-export const designation = "AI Engineer"
+export const designation = "AI Engineer Intern"
 export const location = "Ho Chi Minh, Viet Nam"
 export const pronouns = "he/him"
 export const website = "https://facebook.com/Oillims"
@@ -14,42 +14,50 @@ export const about = "Hi! Welcome to my personal website. I am currently a stude
 
 // Work Experience --> #work section
 export const work = [
-	{
-		from: "None",
-		to: "None",
-		role: "None",
-		org: "None",
-		org_url: "None",
-		location: "None",
-		skills: "None",
-	}
+	// {
+	// 	from: "None",
+	// 	to: "None",
+	// 	role: "None",
+	// 	org: "None",
+	// 	org_url: "None",
+	// 	location: "None",
+	// 	skills: "None",
+	// }
 ]
 
 // Projects --> #project section
 export const projects = [
 	{
-		from: "2023",
-		to: "Present",
-		title: "Project Griffin",
-		description: "A project to improve safety standards in Quahog by implementing innovative safety measures.",
+		from: "Oct 2023",
+		to: "Jan 2024",
+		title: "LLMs in Vietnamese Semantic Text Similarity Application",
+		description: "A project to develop a Vietnamese semantic text similarity application using Large Language Models.",
 		url: "https://projectgriffin.com",
-		tech: "Safety Equipment, Training Programs, Community Outreach",
+		tech: "Keywords: Fine-tuning, Prompt Engineering, LLMs",
 	},
 	{
-		from: "2023",
-		to: "2022",
-		title: "Family Safety Campaign",
-		description: "An initiative to promote safety awareness among families in Quahog.",
+		from: "Oct 2023",
+		to: "Jan 2024",
+		title: "Image Forensics Research",
+		description: "A research project to study about different techniques used in copy-move forgery detection.",
 		url: "https://safefamilyquahog.com",
-		tech: "Workshops, Educational Material, Public Events",
+		tech: "Keywords: Deep-fake, Image Manipulation, Forensics",
 	},
 	{
-		from: "2020",
-		to: "2021",
-		title: "Road Safety Initiative",
-		description: "A campaign to enhance road safety and reduce accidents in Quahog.",
+		from: "Mar 2024",
+		to: "Jun 2024",
+		title: "AI-Enhanced CLI Tools for Commit Messages",
+		description: "A project to develop a CLI tool that automatically generates commit messages integrated with AI.",
 		url: "https://roadsafetyquahog.com",
-		tech: "Traffic Analysis, Signage Improvement, Public Awareness",
+		tech: "Keywords: CLI, Text generation, Git"
+	},
+	{
+		from: "Jul 2024",
+		to: "Present",
+		title: "Forecasting Cryptocurrency using Deep Learning",
+		description: "A project to forecast the price of cryptocurrencies using deep learning techniques.",
+		url: "https://cryptoforecast.com",
+		tech: "Keywords: Time-series, Deep Learning, Forecasting, MLOps"
 	}
 ]
 
@@ -97,6 +105,14 @@ export const certificates = [
 		url: "",
 		description: "Certification in natural language processing and text analysis.",
 	},
+	{
+		issued: "2020",
+		title: "B2 First Certificate in English", 
+		org: "Cambridge Assessment English",
+		url: "",
+		description: "Certification in English including reading, writing, speaking, and listening.",
+	},
+
 
 ]
 
@@ -104,14 +120,14 @@ export const certificates = [
 export const blogs = [
 	{
 		date: "12-July, 2023",
-		url: "https://medium.com/",
+		url: "/blogs/post-1",
 		title: "Adventures in Safety Inspection",
 		description: "Join me in my humorous escapades as a safety inspector in Quahog.",
-		publisher: "Quahog Times",
+		publisher: "sdaffd",
 	},
 	{
 		date: "25-June, 2023",
-		url: "https://medium.com/",
+		url: "./post-2",
 		title: "Top 10 Safety Tips for Families",
 		description: "Learn the best safety practices for families to ensure a secure environment.",
 		publisher: "Safety Monthly",
@@ -120,24 +136,5 @@ export const blogs = [
 
 // Achievements --> #achievement section
 export const achievements = [
-	{
-		title: "Safety Hero Award",
-		year: "2020",
-		decription: "Recognized for outstanding contributions to improving safety standards in Quahog."
-	},
-	{
-		title: "Safety Innovation Prize",
-		year: "2018",
-		decription: "Awarded for implementing innovative safety measures that yielded significant improvements."
-	},
-	{
-		title: "Community Safety Ambassador",
-		year: "2015",
-		decription: "Honored for promoting safety awareness and education in the Quahog community."
-	},
-	{
-		title: "Safety Campaign Excellence",
-		year: "2013",
-		decription: "Acknowledged for leading a successful safety campaign that reached thousands of residents."
-	}
+	
 ]

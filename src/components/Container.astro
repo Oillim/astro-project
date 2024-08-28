@@ -2,6 +2,14 @@
 import * as CONTENT from "../pages/content"
 import AccordionLayout from "../layouts/AccordionLayout.astro";
 import Card from "./Card.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+
+const posts = Array.from(await getCollection('blogposts'))
+
+interface Props {
+  posts:  CollectionEntry<'blogposts'>;
+}
 ---
 
 <ul class="shadow-box">
@@ -78,18 +86,28 @@ import Card from "./Card.astro";
 
     <AccordionLayout title={"Blogs/Writings"} icon={"ic:round-edit-note"}>
       {
-        CONTENT.blogs.map((item) => {
-          return (
-            <Card
-              title={item.title}
-              timeframe={item.date}
-              description={item.description}
-              tags=""
-              url={item.url}
-              url_name={item.publisher}
-            />
-          );
-        })
+        // CONTENT.blogs.map((item) => {
+        //   return (
+        //     <Card
+        //       title={item.title}
+        //       timeframe={item.date}
+        //       description={item.description}
+        //       tags=""
+        //       url={item.url}
+        //       url_name={item.publisher}
+        //     />
+        //   );
+        // })
+        posts.map(post => (
+          <Card
+            title={`blogpost-${(post.data.title)}`}
+            timeframe={post.data.date}
+            description={post.data.description}
+            tags={post.data.tags}
+            url="fb.com"
+            url_name="Facebook"
+          />
+        ))
       }
     </AccordionLayout>
 
