@@ -11,12 +11,12 @@ import * as CONTENT from "../pages/content"
       class="rounded-full border-primary self-end shadow-2xl md:w-24 w-20 aspect-square"
     >
       <img
-        src="/avatar.jpeg"
+        src="src/images/avatar.jpeg"
         alt="profile_picture"
         class="object-cover w-full h-full rounded-full hover:grayscale-0"
       />
     </div>
-
+   
     <div class="grid text-center self-center whitespace-nowrap">
       <h1 class="text-3xl text-text">{CONTENT.name}</h1>
       <h3 class="text-lg text-text/90">{CONTENT.designation}</h3>
@@ -24,14 +24,11 @@ import * as CONTENT from "../pages/content"
     </div>
 
     <div class="md:grid text-right self-end hidden">
-      <h6 class="text-sm text-text/70">{CONTENT.pronouns}</h6>
-      <a
-        href={CONTENT.website}
-        target="_blank"
-        class="hover:text-blue-300 flex items-center justify-center"
-      >
-        {CONTENT.website}
-      </a>
+        <nav>
+        <a href='/posts/' class="hover:text-blue-300 flex items-center justify-center">
+          Blog
+        </a>
+      </nav>
     </div>
   </article>
 </header>

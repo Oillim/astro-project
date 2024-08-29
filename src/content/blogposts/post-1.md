@@ -1,13 +1,12 @@
-
 ---
-
-title: Advanced Git
-description: More advanced git subjects. That should be useful in a professional working environnement.
+layout: src/layouts/BlogLayout.astro
+title: Speculative RAG
+description: New approach in RAG developed by Google Research.
 date: 2024-08-26 19:34
 tags: 
 - Code
-heroImage:
-
+- RAG
+heroImage: "../../images/framework.png"
 ---
 
 Link bài báo: [Speculative RAG](https://arxiv.org/pdf/2407.08223)

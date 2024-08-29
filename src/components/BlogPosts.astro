@@ -1,0 +1,16 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro'
+import { getCollection } from 'astro:content'
+const posts = Array.from(await getCollection('blogposts'))
+---
+
+<BlogLayout>
+  <h1>Blog Posts</h1>
+  <ul>
+    {posts.map((post) => (
+      <li>
+        <p>hello</p>
+      </li>
+    ))}
+  </ul>
+</BlogLayout>

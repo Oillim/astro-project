@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+type Props = {
+  post: CollectionEntry<"blogposts">;
+};
+
+const { post } = Astro.props;
+const { author, description, title, date } = post.data;;
+---
+
+<article class="post-card">
+  <div>
+    <h2>{title}</h2>
+    <div class="meta">
+      <span>•</span>
+    </div>
+  </div>
+  <p>{description}</p>
+  <a href={`/blogposts/${post.slug}`} class="btn">Read Post</a>
+</article>

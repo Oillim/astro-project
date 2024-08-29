@@ -25,16 +25,11 @@ interface Props {
 		<title>CV | {CONTENT.name}</title>
 	</head>
 	<body class="bg-background text-text flex flex-col min-h-screen">
-
+		<nav style="display: flex; gap: 20px; justify-content: center;">
+			<a href="/">Home</a>
+			<a href="/posts/">Posts</a>
+		</nav>
 		<Header />
-
-		<!-- Bar Effect -->
-		<article class="mx-auto h-fit max-w-3xl w-[95vw] flex flex-nowrap bg-slate-400">
-				<div class="bg-slate-900 hover:scale-x-[2] w-full h-1.5" id="one"></div>
-				<div class="bg-red-900 hover:scale-x-[2] w-full h-1.5" id="two"></div>
-				<div class="bg-blue-900 hover:scale-x-[2] w-full h-1.5" id="three"></div>
-		</article>
-
 		<main class="mx-auto flex-grow max-h-[90vh] md:max-h-[70vh] max-w-3xl overflow-y-scroll grid gap-5 p-5 w-[95vw]">
 			<Container />
 		</main>
@@ -71,4 +66,11 @@ interface Props {
 	.overflow-y-scroll {
 		scrollbar-width: 1px;
 	}
+	nav {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		margin-top: ; /* Ensures nav is close to the top */
+		padding-top: 30px; /* Ensures no extra padding */
+  	}
 </style>
