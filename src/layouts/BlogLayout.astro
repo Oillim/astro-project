@@ -3,42 +3,57 @@ const {
   title = "Content Collections",
   description = "A site about Content Collections with Astro.",
 } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
 import "../styles/main.css";
+import Icon from "astro-icon";
 ---
 
-<!doctype html>
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
+    <meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
-  <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/posts/">Posts</a>
-    </nav>
+  <body class="text-text flex flex-col min-h-screen" transition:animate="fade">
+    <nav style="display: flex; gap: 20px; justify-content: center;" class="flex-row">
+			<a href="/" class="flex items-center gap-2">
+			  <Icon name="ic:home" class="w-5 h-5" />
+			  Home
+			</a>
+			<a href="/blogposts/" class="flex items-center gap-2">
+			  <Icon name="ic:round-edit-note" class="w-5 h-5" />
+			  Posts
+			</a>
+		  </nav>
+  
+    <main>
+      <slot />
+    </main>
   </body>
-  <main>
-    <slot />
-  </main>
 </html>
 
 <style>
   body {
-    display: grid;
-    align-items: start;
+    /* display: grid;
+    align-items: start; 
     align-content: start;
-    gap: var(--size-fluid-3);
-    grid-template-rows: auto, 1fr;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: var(--size-fluid-3);
-    color: var(--blue-12);
+    gap: var(--size-fluid-3); */
+    /* grid-template-rows: auto, 1fr; */
+    /* min-height: 100vh;
+    min-height: 100dvh; */
+    padding: 30px;
+    /* color: var(--blue-12);
     background-size: cover;
     background-image: linear-gradient(to top, var(--blue-0), var(--stone-0)),
-      var(--noise-5);
+      var(--noise-5); */
+    background-color: #03002e;
   }
 
   main {
@@ -46,10 +61,4 @@ import "../styles/main.css";
     max-width: 1500px;
   }
 
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--size-2);
-  }
 </style>

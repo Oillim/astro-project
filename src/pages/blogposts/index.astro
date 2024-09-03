@@ -1,18 +1,17 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import Card from "../../components/Card.astro";
 import PostCard from "../../components/PostCard.astro";
 
 const posts = await getCollection("blogposts");
-console.log(posts);
 ---
 
 <BlogLayout>
-	<div class="post-wrapper">
+	<div class="post-wrapper" >
 		<h1>Posts</h1>
 		<div>
-		  {posts.map((p) => <PostCard post={p} />)}
+		  {posts.map((p: CollectionEntry<"blogposts">) => <PostCard post={p} />)}
 		</div>
-	  </div>
+	  </div> 
 </BlogLayout>

@@ -1,0 +1,11 @@
+---
+import BlogLayout from './BlogLayout.astro';
+const {frontmatter} = Astro.props;
+---
+
+<BlogLayout>
+  <div class="content-wrapper">
+    <h1>{frontmatter.title}</h1>
+    <slot />
+  </div>
+</BlogLayout>

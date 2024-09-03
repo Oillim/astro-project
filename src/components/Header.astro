@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets"
 import * as CONTENT from "../pages/content"
 ---
 
@@ -10,10 +11,11 @@ import * as CONTENT from "../pages/content"
     <div
       class="rounded-full border-primary self-end shadow-2xl md:w-24 w-20 aspect-square"
     >
-      <img
-        src="src/images/avatar.jpeg"
+      <Image
+        src="/src/images/avatar.jpeg"
         alt="profile_picture"
         class="object-cover w-full h-full rounded-full hover:grayscale-0"
+        width="50" height="50"
       />
     </div>
    
@@ -23,12 +25,6 @@ import * as CONTENT from "../pages/content"
       <h5 class="text-sm text-text/80">{CONTENT.location}</h5>
     </div>
 
-    <div class="md:grid text-right self-end hidden">
-        <nav>
-        <a href='/posts/' class="hover:text-blue-300 flex items-center justify-center">
-          Blog
-        </a>
-      </nav>
-    </div>
+   
   </article>
 </header>

@@ -5,8 +5,7 @@ import Card from "./Card.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import BlogLayout from "../layouts/BlogLayout.astro";
 
-const posts = Array.from(await getCollection('blogposts'))
-console.log(posts)
+const posts = Array.from(await getCollection('blogposts'));
 
 ---
 

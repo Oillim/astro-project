@@ -1,12 +1,12 @@
 ---
-layout: src/layouts/BlogLayout.astro
+
 title: Speculative RAG
 description: New approach in RAG developed by Google Research.
 date: 2024-08-26 19:34
 tags: 
 - Code
 - RAG
-heroImage: "../../images/framework.png"
+heroImage: "/images/framework.png"
 ---
 
 Link bài báo: [Speculative RAG](https://arxiv.org/pdf/2407.08223)

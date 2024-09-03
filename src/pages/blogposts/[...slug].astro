@@ -1,16 +1,28 @@
 ---
-import * as CONTENT from "./content"
-import Container from "../components/Container.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry, getEntry } from "astro:content";
 import Icon from "astro-icon";
 import { ViewTransitions } from "astro:transitions";
-const posts = Array.from((await getCollection('blogposts')))
 
-interface Props {
-  posts:  CollectionEntry<'blogposts'>[]
+export async function getStaticPaths() {
+  const posts = await getCollection("blogposts");
+  return posts.map((entry: CollectionEntry<"blogposts">) => {
+    return {
+    params: { slug: entry.slug},
+    props: { entry }
+    };
+  });
 }
+
+type Props = {
+  entry: CollectionEntry<"blogposts">;
+};
+
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+
+console.log("content", Content);
 ---
 
 <html lang="en">
@@ -22,8 +34,13 @@ interface Props {
 		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>CV | {CONTENT.name}</title>
-		<ViewTransitions />
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+
+    	<!-- The loading of KaTeX is deferred to speed up page rendering -->
+    	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+
+		<ViewTransitions>
 	</head>
 	<body style="background-color: #03002e;" class="text-text flex flex-col min-h-screen" transition:animate="fade">
 		<nav style="display: flex; gap: 20px; justify-content: center;" class="flex-row">
@@ -36,15 +53,14 @@ interface Props {
 			  Posts
 			</a>
 		  </nav>
-		<Header />
 		<main class="mx-auto flex-grow overflow-hidden grid gap-5 p-5 w-[95vw]">
-			<Container />
+			<article class="prose prose-neutral lg:prose-xl dark:prose-invert max-w-none">
+x				<Content/>
+			  </article>
+x		
 		</main>
-
-		<Footer />
 	</body>
 </html>
-
 
 <style is:global>
 	*{
